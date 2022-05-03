@@ -1,0 +1,44 @@
+- crear carpeta
+- crear app.js
+- ejecutar npm init -y
+- crear los scripts start y dev
+- ejecutar npm install express --save
+- ejecutar npm install ejs
+- ejecutar npm install --save-dev nodemon
+- configurar express en el app.js
+- configurar ejs en el app.js
+- probar que el servidro levante y que muestre el hello
+- crear la estructura de archivos
+- carpeta controladores con su controlador.
+- carpeta rutas con su manejador
+- carpeta vistas con sus dos vistas
+- carpeta public con sus carpetas images y styles
+- cargar las imágenes a la carpeta
+- agregar la lógica del controlador
+- agregar la lógica del manejador de rutas
+- modificar el app.js para que use el manejador de rutas
+- agregar una plantilla vacía a las vistas
+- probar que al ingresar a cada ruta me muestre la vista correspondiente
+- crear la variable heroes dentro del archivo del controlador, por fuera, 
+con toda la info de los heroes
+- crear o ajustar el método index, para que haga un render del index.ejs y
+envíe la variable heroes a la vista
+- En la vista ciclar sobre la variable heroes para pintar cada heroe con toda su info
+- Llamar a la imagen de heroe utilizando el id del heroe .jpg y la ruta /images
+- hacer que al dar clic sobre el nombre y/o imagen nos lleve a la nueva vista detalleHeroe.ejs
+- para eso es necesario agregar el método al controlador y
+- agregar al manejador de rutas la ruta por ejemplo /detalle/:slug
+- Para recibir un slug dinámico (cambia al dar clic en cada heroe)
+- y así invocar el método correspondiente del controlador, por ejemplo details
+- Ahora es necesario identificar cuál heroe nos están llamando para mostrarlo en la vista detalleHeroe
+- Para eso, dentro del controlador, vamos a hacer uso del request (req) y a buscar
+en los params el slug que nos llega de la petición del clic
+- por ejemplo http://localhost:3000/detalle/dc-batman
+- esa petición de tipo get viaja por el app.js, luego al router principal, luego
+al controlador y ejecuta el método details
+- el req.params.slug debe contener la info "dc-batman" ya que es lo que se manda en la petición
+- con ese valor, hacemos un método find sobre la lista completa de heroes, variable heroes
+- el método find nos devuelve un elemento, la primera coincidencia, ese valor
+lo guardamos en una nueva variable llamada hero o heroe en singular porque es solo uno
+- Esa variable se la mandamos a la vista de la misma forma que con la variable heroes al index
+- en la vista detalleHeroe.ejs, recibimos la variable heroe y pintamos la info

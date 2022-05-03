@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes APP</title>
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+
+    <main>
+
+        <h2>Heroes APP</h2>
+        
+        <section class="heroes-section">
+            
+            <% heroes.forEach(element => { %>
+                
+                <article class="hero-card">
+                    <a href="/detalle/<%= element.id %>"> 
+                        <h3><%= element.superhero %> </h3>
+                        <img src="/images/<%= element.id %>.jpg" width="200" alt="Imagen de <%= element.superhero %> ">
+                    </a>
+                        
+                        <ul>
+                            <li><%= element.publisher %> </li>
+                            <li><%= element.alter_ego %> </li>
+                        </ul>
+                    </article>
+                <% }) %>
+        </section>
+    </main>
+
+            
+</body>
+</html>
