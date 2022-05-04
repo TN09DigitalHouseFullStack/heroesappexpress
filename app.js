@@ -1,7 +1,7 @@
 const express = require('express')
 const mainRouter = require('./routes');
 const app = express()
-const port = 3000
+const port = 3003
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');

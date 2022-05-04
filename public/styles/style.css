@@ -1,12 +1,65 @@
 *{
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 body{
-    width: 1400px;
+    color: rgb(40, 40, 40);
     margin-left: auto;
     margin-right: auto;
+    width: 1300px;
+
+}
+h2{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(40, 40, 40)
+}
+a:visited{
+    text-decoration: none;
+    color: rgb(87, 0, 145)
+}
+.hero-card:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+header{
+    align-content: center;
+    display: flex;
+    justify-content: end;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+
+}
+nav{
+    height: inherit;
+    width: 50%;
+
+}
+nav ul{
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li:active{
+    text-decoration: underline;
 }
 
 .heroes-section{
@@ -15,14 +68,37 @@ body{
 }
 
 .hero-card{
-    width: 300px;
-    margin: 10px;
+    align-items: center;
+    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px #ccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    margin: 10px;
+    width: 300px;
+}
+
+
+.publisher-card{
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    width: 300px;
+    padding-right: 20px;
+    text-decoration: underline;
+}
+
+.publisher-card:hover{
+    font-weight: bolder;
+}
+
+.detalle-article{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.detalle-article img {
+    width: 400px;
 }

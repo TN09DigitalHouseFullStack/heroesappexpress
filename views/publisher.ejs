@@ -3,10 +3,10 @@
     <%- include('./partials/head.ejs') %> 
 <body>
 
-<%- include('./partials/header.ejs') %> 
+    <%- include('./partials/header.ejs') %> 
     <main>
 
-        <h2>Heroes APP</h2>
+        <h2><%= publisher %>  Heroes</h2>
         
         <section class="heroes-section">
             
@@ -21,13 +21,13 @@
                     <p><%= element.alter_ego %> </p>
                         <p>
                             <% if ( element.publisher === "DC Comics") { %>
-                                <a href="/publisher/dc"> 
+                               
                                     <span class="publisher-card"><%= element.publisher %> </span>  
-                                </a>
+                          
                             <% } else { %>
-                                <a href="/publisher/marvel"> 
+                                
                                     <span class="publisher-card"><%= element.publisher %> </span>  
-                                </a>
+                            
                             <% } %>
                         </p>
                         
